@@ -55,9 +55,6 @@ class Dialog(QDialog, Ui_Dialog):
         self.progressBar.setValue(0)
         layermap = QgsMapLayerRegistry.instance().mapLayers()
 
-        import pdb
-        pdb.set_trace()
-
         for name, layer in layermap.iteritems():
             if layer.type() == QgsMapLayer.VectorLayer:
                 if layer.geometryType() == QGis.Polygon:
